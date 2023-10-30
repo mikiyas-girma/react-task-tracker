@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const Header = ({ title }) => {
   return (
@@ -9,6 +10,10 @@ const Header = ({ title }) => {
 
 Header.defaultProps = {
   title: 'Task Tracker',
+}
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
 }
 
 export default Header
