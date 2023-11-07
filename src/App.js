@@ -6,6 +6,9 @@ import Tasks  from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import About from "./components/About";
 
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
@@ -95,6 +98,9 @@ function App() {
               {tasks.length > 0 ?( <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> ): (
                 'No tasks to show'
                 )}
+              < ClickCounter/>
+              <HoverCounter/>
+              
             </>
           }/>
       </Routes>
